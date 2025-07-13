@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Attia Shahid - Veterinary Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hero-section {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(13, 148, 136, 0.85),
+          rgba(255, 255, 255, 0.4)
+        ),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23F3F4F6" d="M100 20c-44.2 0-80 35.8-80 80s35.8 80 80 80 80-35.8 80-80-35.8-80-80-80zm0 140c-33.1 0-60-26.9-60-60s26.9-60 60-60 60 26.9 60 60-26.9 60-60 60z"/><path fill="%230D9488" d="M100 40c-33.1 0-60 26.9-60 60s26.9 60 60 60 60-26.9 60-60-26.9-60-60-60zm0 100c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"/><path fill="%23FFFFFF" d="M100 60c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm0 60c-11 0-20-9-20-20s9-20 20-20 20 9 20 20-9 20-20 20z"/></svg>');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 6rem 0;
+      color: black;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navigation -->
+  <nav class="bg-teal-600 text-white fixed top-0 w-full z-10 shadow-lg" style="height: 100px;">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Dr. Attia Shahid</h1>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:text-teal-200">Home</a></li>
+        <li><a href="about.html" class="hover:text-teal-200">About</a></li>
+        <li><a href="education.html" class="hover:text-teal-200">Education</a></li>
+        <li><a href="experience.html" class="hover:text-teal-200">Experience</a></li>
+        <li><a href="skills.html" class="hover:text-teal-200">Skills</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-200">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-200">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section mt-16 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-4 fade-in">Welcome to My Veterinary Portfolio</h2>
+      <p class="text-xl fade-in">Dr. Attia Shahid, Doctor of Veterinary Medicine</p>
+      <p class="text-lg mt-4 max-w-3xl mx-auto fade-in">
+        Passionate about animal welfare and pet healthcare, I am a dedicated veterinarian with a strong academic background and hands-on clinical experience. Explore my journey and expertise in veterinary medicine.
+      </p>
+      <a href="about.html" class="mt-6 inline-block bg-white text-teal-600 px-6 py-3 rounded-lg font-semibold hover:bg-teal-100 fade-in">Learn More About Me</a>
+    </div>
+  </section>
+<br><br><br><br>
+  <!-- Footer -->
+  <footer class="bg-teal-600 text-white py-6 mt-10">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 Dr. Attia Shahid. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach((el, i) => {
+        setTimeout(() => el.classList.add('active'), i * 400);
+      });
+    });
+  </script>
+</body>
+</html>
