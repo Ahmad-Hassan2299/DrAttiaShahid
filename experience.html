@@ -12,7 +12,7 @@
     }
     .hero-section {
       background: linear-gradient(to right, #4a90e2, #90caf9);
-      padding: 4rem 0;
+      padding: 4rem 1rem;
       color: white;
     }
     .exp-card {
@@ -24,36 +24,51 @@
   </style>
 </head>
 <body class="text-gray-800">
+
   <!-- Navigation -->
-  <nav class="bg-teal-600 text-white fixed top-0 w-full z-10 shadow-lg" style="height: 100px;">
+  <nav class="bg-teal-600 text-white fixed top-0 w-full z-10 shadow-lg">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Dr. Attia Shahid</h1>
-      <ul class="flex space-x-6">
-        <li><a href="index.html" class="hover:text-teal-200">Home</a></li>
-        <li><a href="about.html" class="hover:text-teal-200">About</a></li>
-        <li><a href="education.html" class="hover:text-teal-200">Education</a></li>
-        <li><a href="experience.html" class="hover:text-teal-200">Experience</a></li>
-        <li><a href="skills.html" class="hover:text-teal-200">Skills</a></li>
-        <li><a href="certifications.html" class="hover:text-teal-200">Certifications</a></li>
-        <li><a href="contact.html" class="hover:text-teal-200">Contact</a></li>
+      <h1 class="text-xl sm:text-2xl font-bold">Dr. Attia Shahid</h1>
+      <button id="menu-toggle" class="sm:hidden text-white text-2xl focus:outline-none">
+        ☰
+      </button>
+      <ul id="menu" class="hidden sm:flex space-x-4 sm:space-x-6 text-sm sm:text-base">
+        <li><a href="index.html" class="hover:text-teal-200 block py-1">Home</a></li>
+        <li><a href="about.html" class="hover:text-teal-200 block py-1">About</a></li>
+        <li><a href="education.html" class="hover:text-teal-200 block py-1">Education</a></li>
+        <li><a href="experience.html" class="hover:text-teal-200 block py-1">Experience</a></li>
+        <li><a href="skills.html" class="hover:text-teal-200 block py-1">Skills</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-200 block py-1">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-200 block py-1">Contact</a></li>
       </ul>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="sm:hidden hidden px-4 pb-4 bg-teal-700 text-white">
+      <a href="index.html" class="block py-2 hover:text-teal-200">Home</a>
+      <a href="about.html" class="block py-2 hover:text-teal-200">About</a>
+      <a href="education.html" class="block py-2 hover:text-teal-200">Education</a>
+      <a href="experience.html" class="block py-2 hover:text-teal-200">Experience</a>
+      <a href="skills.html" class="block py-2 hover:text-teal-200">Skills</a>
+      <a href="certifications.html" class="block py-2 hover:text-teal-200">Certifications</a>
+      <a href="contact.html" class="block py-2 hover:text-teal-200">Contact</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section mt-16">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Experience</h2>
+  <section class="hero-section mt-28 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6">Experience</h2>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section class="py-20">
+  <section class="py-16 sm:py-20">
     <div class="container mx-auto px-4 space-y-10 max-w-4xl">
       <div class="exp-card">
-        <h3 class="text-xl font-semibold mb-2">Intern, Zia Veterinary Clinic - Lahore</h3>
-        <p class="text-lg text-gray-700 mb-3">February 2025 - June 2025</p>
-        <ul class="list-disc list-inside text-gray-800 text-base space-y-1">
+        <h3 class="text-xl sm:text-2xl font-semibold mb-2">Intern, Zia Veterinary Clinic - Lahore</h3>
+        <p class="text-base sm:text-lg text-gray-700 mb-3">February 2025 - June 2025</p>
+        <ul class="list-disc list-inside text-gray-800 text-sm sm:text-base space-y-1">
           <li>Assisted in clinical diagnosis and treatment of pets.</li>
           <li>Observed and participated in surgical procedures.</li>
           <li>Provided vaccination, deworming, and general health check-ups for companion animals.</li>
@@ -63,9 +78,9 @@
       </div>
 
       <div class="exp-card">
-        <h3 class="text-xl font-semibold mb-2">Pre-Intern, Pet Care Clinic - Rawalpindi</h3>
-        <p class="text-lg text-gray-700 mb-3">June 2025 - September 2025</p>
-        <ul class="list-disc list-inside text-gray-800 text-base space-y-1">
+        <h3 class="text-xl sm:text-2xl font-semibold mb-2">Pre-Intern, Pet Care Clinic - Rawalpindi</h3>
+        <p class="text-base sm:text-lg text-gray-700 mb-3">June 2024 - September 2024</p>
+        <ul class="list-disc list-inside text-gray-800 text-sm sm:text-base space-y-1">
           <li>Assisted in pet handling, vitals, and clinic preparation.</li>
           <li>Observed minor surgeries and routine procedures.</li>
           <li>Operated X-ray and ultrasound under supervision.</li>
@@ -81,5 +96,13 @@
       <p>© 2025 Dr. Attia Shahid. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
