@@ -1,99 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications - Dr. Attia Shahid</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #eef2f5;
-        }
-        .hero-section {
-            background: linear-gradient(to right, #4a90e2, #90caf9);
-            padding: 4rem 0;
-            color: white;
-        }
-        .cert-card {
-            background-color: white;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease;
-        }
-        .cert-card:hover {
-            transform: translateY(-5px);
-        }
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certifications - Dr. Attia Shahid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #eef2f5;
+    }
+    .hero-section {
+      background: linear-gradient(to right, #4a90e2, #90caf9);
+      padding: 4rem 1rem;
+      color: white;
+    }
+    .cert-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="bg-teal-600 text-white fixed top-0 w-full z-10 shadow-lg" style="height: 100px;">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Dr. Attia Shahid</h1>
-            <ul class="flex space-x-6">
-                <li><a href="index.html" class="hover:text-teal-200">Home</a></li>
-                <li><a href="about.html" class="hover:text-teal-200">About</a></li>
-                <li><a href="education.html" class="hover:text-teal-200">Education</a></li>
-                <li><a href="experience.html" class="hover:text-teal-200">Experience</a></li>
-                <li><a href="skills.html" class="hover:text-teal-200">Skills</a></li>
-                <li><a href="certifications.html" class="hover:text-teal-200">Certifications</a></li>
-                <li><a href="contact.html" class="hover:text-teal-200">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section mt-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Certifications & Workshops</h2>
-        </div>
-    </section>
+  <!-- Navigation -->
+  <nav class="bg-teal-600 text-white fixed top-0 w-full z-10 shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl sm:text-2xl font-bold">Dr. Attia Shahid</h1>
+      <button id="menu-toggle" class="sm:hidden text-white text-2xl focus:outline-none">☰</button>
+      <ul id="menu" class="hidden sm:flex space-x-4 sm:space-x-6 text-sm sm:text-base">
+        <li><a href="index.html" class="hover:text-teal-200 block py-1">Home</a></li>
+        <li><a href="about.html" class="hover:text-teal-200 block py-1">About</a></li>
+        <li><a href="education.html" class="hover:text-teal-200 block py-1">Education</a></li>
+        <li><a href="experience.html" class="hover:text-teal-200 block py-1">Experience</a></li>
+        <li><a href="skills.html" class="hover:text-teal-200 block py-1">Skills</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-200 block py-1">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-200 block py-1">Contact</a></li>
+      </ul>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="sm:hidden hidden px-4 pb-4 bg-teal-700 text-white">
+      <a href="index.html" class="block py-2 hover:text-teal-200">Home</a>
+      <a href="about.html" class="block py-2 hover:text-teal-200">About</a>
+      <a href="education.html" class="block py-2 hover:text-teal-200">Education</a>
+      <a href="experience.html" class="block py-2 hover:text-teal-200">Experience</a>
+      <a href="skills.html" class="block py-2 hover:text-teal-200">Skills</a>
+      <a href="certifications.html" class="block py-2 hover:text-teal-200">Certifications</a>
+      <a href="contact.html" class="block py-2 hover:text-teal-200">Contact</a>
+    </div>
+  </nav>
 
-    <!-- Certifications Grid -->
-    <section class="py-20">
-        <div class="cert-grid">
-            <div class="cert-card">
-                <h3 class="text-xl font-semibold mb-2">Participation in Veterinary Clinical Skills Workshops</h3>
-                <p class="text-lg">2023 - 2025</p>
-            </div>
-            <div class="cert-card">
-                <h3 class="text-xl font-semibold mb-2">Pet Healthcare and Management Training Programs</h3>
-                <p class="text-lg">2023 - 2024</p>
-            </div>
-            <div class="cert-card">
-                <h3 class="text-xl font-semibold mb-2">Certificate in Small Animal Emergency and Critical Care</h3>
-                <p class="text-lg">August 2024</p>
-            </div>
-            <div class="cert-card">
-                <h3 class="text-xl font-semibold mb-2">Certificate of Achievement (Proctor 2020-2025)</h3>
-                <p class="text-lg">2020 - 2025</p>
-            </div>
-            <div class="cert-card">
-                <h3 class="text-xl font-semibold mb-2">Certificate of Achievement (World Egg Day)</h3>
-                <p class="text-lg">13 October 2023</p>
-            </div>
-            <div class="cert-card">
-                <h3 class="text-xl font-semibold mb-2">Letter of Appreciation (Rational Antimicrobial Therapy)</h3>
-                <p class="text-lg">3 August 2023</p>
-            </div>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero-section mt-28 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6">Certifications & Workshops</h2>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-teal-600 text-white py-6">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2025 Dr. Attia Shahid. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- Certifications Grid -->
+  <section class="py-16 sm:py-20 px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <div class="cert-card">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">Participation in Veterinary Clinical Skills Workshops</h3>
+        <p class="text-base sm:text-lg text-gray-700">2023 - 2025</p>
+      </div>
+      <div class="cert-card">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">Pet Healthcare and Management Training Programs</h3>
+        <p class="text-base sm:text-lg text-gray-700">2023 - 2024</p>
+      </div>
+      <div class="cert-card">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">Certificate in Small Animal Emergency and Critical Care</h3>
+        <p class="text-base sm:text-lg text-gray-700">August 2024</p>
+      </div>
+      <div class="cert-card">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">Certificate of Achievement (Proctor 2020-2025)</h3>
+        <p class="text-base sm:text-lg text-gray-700">2020 - 2025</p>
+      </div>
+      <div class="cert-card">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">Certificate of Achievement (World Egg Day)</h3>
+        <p class="text-base sm:text-lg text-gray-700">13 October 2023</p>
+      </div>
+      <div class="cert-card">
+        <h3 class="text-lg sm:text-xl font-semibold mb-2">Letter of Appreciation (Rational Antimicrobial Therapy)</h3>
+        <p class="text-base sm:text-lg text-gray-700">3 August 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-teal-600 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 Dr. Attia Shahid. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toggle Menu Script -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
 </body>
 </html>
