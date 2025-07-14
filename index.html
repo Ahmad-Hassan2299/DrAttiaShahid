@@ -20,7 +20,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      padding: 6rem 0;
+      padding: 4rem 1rem;
       color: black;
     }
 
@@ -39,47 +39,67 @@
 
 <body class="bg-gray-100 text-gray-800">
   <!-- Navigation -->
-  <nav class="bg-teal-600 text-white fixed top-0 w-full z-10 shadow-lg" style="height: 100px;">
+  <nav class="bg-teal-600 text-white fixed top-0 w-full z-10 shadow-lg">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Dr. Attia Shahid</h1>
-      <ul class="flex space-x-6">
-        <li><a href="index.html" class="hover:text-teal-200">Home</a></li>
-        <li><a href="about.html" class="hover:text-teal-200">About</a></li>
-        <li><a href="education.html" class="hover:text-teal-200">Education</a></li>
-        <li><a href="experience.html" class="hover:text-teal-200">Experience</a></li>
-        <li><a href="skills.html" class="hover:text-teal-200">Skills</a></li>
-        <li><a href="certifications.html" class="hover:text-teal-200">Certifications</a></li>
-        <li><a href="contact.html" class="hover:text-teal-200">Contact</a></li>
+      <h1 class="text-xl sm:text-2xl font-bold">Dr. Attia Shahid</h1>
+      <button id="menu-toggle" class="sm:hidden text-white text-2xl focus:outline-none">
+        ☰
+      </button>
+      <ul id="menu" class="hidden sm:flex space-x-4 sm:space-x-6 sm:items-center text-sm sm:text-base">
+        <li><a href="index.html" class="hover:text-teal-200 block py-1">Home</a></li>
+        <li><a href="about.html" class="hover:text-teal-200 block py-1">About</a></li>
+        <li><a href="education.html" class="hover:text-teal-200 block py-1">Education</a></li>
+        <li><a href="experience.html" class="hover:text-teal-200 block py-1">Experience</a></li>
+        <li><a href="skills.html" class="hover:text-teal-200 block py-1">Skills</a></li>
+        <li><a href="certifications.html" class="hover:text-teal-200 block py-1">Certifications</a></li>
+        <li><a href="contact.html" class="hover:text-teal-200 block py-1">Contact</a></li>
       </ul>
+    </div>
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="sm:hidden hidden px-4 pb-4 bg-teal-700 text-white">
+      <a href="index.html" class="block py-2 hover:text-teal-200">Home</a>
+      <a href="about.html" class="block py-2 hover:text-teal-200">About</a>
+      <a href="education.html" class="block py-2 hover:text-teal-200">Education</a>
+      <a href="experience.html" class="block py-2 hover:text-teal-200">Experience</a>
+      <a href="skills.html" class="block py-2 hover:text-teal-200">Skills</a>
+      <a href="certifications.html" class="block py-2 hover:text-teal-200">Certifications</a>
+      <a href="contact.html" class="block py-2 hover:text-teal-200">Contact</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section mt-16 text-center">
+  <section class="hero-section mt-28 sm:mt-24 text-center">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-4 fade-in">Welcome to My Veterinary Portfolio</h2>
-      <p class="text-xl fade-in">Dr. Attia Shahid, Doctor of Veterinary Medicine</p>
-      <p class="text-lg mt-4 max-w-3xl mx-auto fade-in">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4 fade-in">Welcome to My Veterinary Portfolio</h2>
+      <p class="text-lg sm:text-xl fade-in">Dr. Attia Shahid, Doctor of Veterinary Medicine</p>
+      <p class="text-base sm:text-lg mt-4 max-w-3xl mx-auto fade-in">
         Passionate about animal welfare and pet healthcare, I am a dedicated veterinarian with a strong academic background and hands-on clinical experience. Explore my journey and expertise in veterinary medicine.
       </p>
       <a href="about.html" class="mt-6 inline-block bg-white text-teal-600 px-6 py-3 rounded-lg font-semibold hover:bg-teal-100 fade-in">Learn More About Me</a>
     </div>
   </section>
-<br><br><br><br>
+
   <!-- Footer -->
-  <footer class="bg-teal-600 text-white py-6 mt-10">
+  <footer class="bg-teal-600 text-white py-6 mt-12">
     <div class="container mx-auto px-4 text-center">
       <p>© 2025 Dr. Attia Shahid. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Animation Script -->
+  <!-- Scripts -->
   <script>
+    // Animation
     document.addEventListener('DOMContentLoaded', () => {
       const elements = document.querySelectorAll('.fade-in');
       elements.forEach((el, i) => {
         setTimeout(() => el.classList.add('active'), i * 400);
       });
+    });
+
+    // Mobile Menu Toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
     });
   </script>
 </body>
